@@ -1,0 +1,23 @@
+<ion-header style="height: 100%;">
+  <ion-header>
+    <ion-toolbar color="tertiary">
+      <ion-button slot="end" (click)="presentActionSheet()" fill="clear" style="color: #fff; font-size: 25px">
+        <ion-icon name="menu"></ion-icon>
+      </ion-button>
+      <ion-title class="ion-text-center">
+        Subir Ficheros
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content class="ion-padding">
+    <ion-list>
+      <ion-list-header>
+        <ion-label>Prograso de subida</ion-label>
+      </ion-list-header>
+      <ion-progress-bar [value]="progress"></ion-progress-bar>
+    </ion-list>
+  </ion-content>
+
+ 
+  

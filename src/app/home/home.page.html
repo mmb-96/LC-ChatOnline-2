@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-button slot="end" (click)="presentActionSheet()" fill="clear" style="color: #fff; font-size: 25px">
+      <ion-icon name="menu"></ion-icon>
+    </ion-button>
+    <ion-title class="ion-text-center">
+      Mi chat App
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-list>
+    <ion-item *ngFor="let chat of chatRooms" (click)="openChat(chat)">
+      <ion-avatar slot="start">
+        <ion-img [src]="chat.img"></ion-img>
+      </ion-avatar>
+      <ion-label>
+        <h2><b [innerHTML]="chat.name"></b></h2>
+        <p [innerHTML]="chat.description"></p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
