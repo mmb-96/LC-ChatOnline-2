@@ -73,11 +73,11 @@ export class SubirFicherosPage implements OnInit {
   seleccionar() {
     this.fileChooser.open().then((uri) => {
       alert(uri);
-
       this.filePath.resolveNativePath(uri).then(filePath => {
         alert(filePath);
         let dirPathSegments = filePath.split('/'); // Cortar la cadena por /
-        let fileName = dirPathSegments[dirPathSegments.length-1]; // Guardamos el nombre del fichero para obtener luego el tipo de archivo.
+        // Guardamos el nombre del fichero para obtener luego el tipo de archivo.
+        let fileName = dirPathSegments[dirPathSegments.length - 1];
         dirPathSegments.pop(); // Elimina el ultimo elemento, el nombre del archivo.
         let dirPath = dirPathSegments.join('/'); // Unir por /
         let tipo = fileName.split('.'); // Cortar la cadena por .
