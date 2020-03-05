@@ -29,6 +29,9 @@ export class HomePage implements OnInit {
     this.authSer.logout();
   }
 
+  /*
+  Metodo que nos redirrige a la pagina para subir archivos.
+  */
   subitArchivo() {
     this.router.navigate(['subir-ficheros']);
   }
@@ -50,7 +53,8 @@ export class HomePage implements OnInit {
     }).then( (modal) => modal.present());
   }
 
-  // Se utiliza para el boton de los chat de la izquierda que nos permite desconectarnos de la app o ir a la pagina para subir fichero ha firebase.
+  // Se utiliza para el boton de los chat de la izquierda que nos permite
+  // desconectarnos de la app o ir a la pagina para subir fichero ha firebase.
    async presentActionSheet() {
     const actionSheet = await this.actionSheetController.create({
       header: 'Opciones',
